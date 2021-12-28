@@ -1,0 +1,63 @@
+<% layout('layouts/boilerplate') %>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+    <div class="container-md fixed-top mt-1">
+      <a class="navbar-brand" href="/"><img src="/css/images/logo.svg" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggler">
+        <ul class="navbar-nav me-auto m-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/careers">Careers</a>
+          </li>
+        </ul>
+        <button class="btn request">
+          <a href="/request" class="text-decoration-none text-white">Request Invite</a>
+        </button>
+      </div>    
+    </div>
+</nav>
+
+<%- include('flash/success') %> 
+<%- include('flash/error') %> 
+
+<div class="container-md">
+    <div class="row my-5">
+      <div class="col-12 col-md-6 offset-md-3">
+        <h1 class="my-5">request an invite</h1>
+        <p>We'll send you a link once you've completed and submitted the form</p>
+        <form action="/request" method="POST" class="needs-validation" novalidate>
+          <div class="mb-3">
+            <label for="fullname" class="form-label">Fullname</label>
+            <input type="text" name="client[fullname]" class="form-control" id="fullname" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="client[email]" class="form-control" id="email" aria-describedby="emailHelp" required>
+          </div>
+          <div class="mb-3">
+            <label for="number" class="form-label">Phone Number:</label>
+            <input type="tel" name="client[number]" class="form-control" id="number" required>
+          </div>
+          <!-- <div class="mb-3">
+            <input id="invalid-feedback" type="checkbox" name="client[agree]" required>
+            <label for="invalid-feedback">I Agree to the <a href="#">Terms of Service</a> of Easy Bank</label>
+          </div>
+          <div class="invalid-feedback">
+            You must agree before submitting.
+          </div> -->
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>

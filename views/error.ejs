@@ -1,0 +1,38 @@
+<% layout('layouts/boilerplate') %> 
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+    <div class="container-md fixed-top mt-1">
+      <a class="navbar-brand" href="/"><img src="/css/images/logo.svg" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggler">
+        <ul class="navbar-nav me-auto m-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/careers">Careers</a>
+          </li>
+        </ul>
+        <button class="btn request">
+          <a href="/request" class="text-decoration-none text-white">Request Invite</a>
+        </button>
+      </div>    
+    </div>
+  </nav>
+
+<div class="error row d-flex align-items-center">
+    <div class="col-12 col-md-6 offset-md-3">
+        <div class="alert alert-danger text-center" role="alert">
+            <h4 class="alert-heading"><%= message %></h4>
+            <h3><%= status %></h3>
+        </div>
+    </div>
+</div>
